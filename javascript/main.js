@@ -15,7 +15,9 @@ if (utenteEtà <= 18) {
     const discount = result * discountPerc / 100;
     console.log(discount);
 
-    const finalPrice = result - discount;
+    const price = result - discount;
+   
+    const finalPrice =price.toFixed(2);
     console.log(finalPrice);
 
     prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
@@ -26,12 +28,13 @@ if (utenteEtà <= 18) {
     const discount = result * discountPerc / 100;
     console.log(discount);
 
-    const finalPrice = result - discount;
+    const price = result - discount;
+    
+    const finalPrice =price.toFixed(2);
     console.log(finalPrice);
 
     prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
 }
-    
 
 
 
