@@ -11,33 +11,37 @@ console.log(result);
 
 const finalResult = result.toFixed(2);
 
-if (utenteEtà < 18) {
-    const discountPerc= 20;
-
-    const discount = result * discountPerc / 100;
-    console.log(discount);
-
-    const price = result - discount;
-   
-    const finalPrice =price.toFixed(2);
-    console.log(finalPrice);
-
-    prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
-} else if (utenteEtà >= 65) 
-{
-    const discountPerc= 40;
-
-    const discount = result * discountPerc / 100;
-    console.log(discount);
-
-    const price = result - discount;
+if (!isNaN(utenteEtà) && !isNaN(utenteKm)){
+    if (utenteEtà < 18) {
+        const discountPerc= 20;
     
-    const finalPrice =price.toFixed(2);
-    console.log(finalPrice);
-
-    prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
-} else {
-    prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalResult;
+        const discount = result * discountPerc / 100;
+        console.log(discount);
+    
+        const price = result - discount;
+       
+        const finalPrice =price.toFixed(2);
+        console.log(finalPrice);
+    
+        prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
+    } else if (utenteEtà >= 65) 
+    {
+        const discountPerc= 40;
+    
+        const discount = result * discountPerc / 100;
+        console.log(discount);
+    
+        const price = result - discount;
+        
+        const finalPrice =price.toFixed(2);
+        console.log(finalPrice);
+    
+        prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
+    } else {
+        prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalResult;
+    }    
+} else{
+    prezzoBiglietto.innerText = "I valori inseriti non sono validi. Ricaricare la pagina.";
 }
 
 
