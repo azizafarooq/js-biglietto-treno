@@ -9,7 +9,9 @@ console.log(utenteEtà);
 const result = utenteKm * 0.21;
 console.log(result);
 
-if (utenteEtà <= 18) {
+const finalResult = result.toFixed(2);
+
+if (utenteEtà < 18) {
     const discountPerc= 20;
 
     const discount = result * discountPerc / 100;
@@ -21,7 +23,7 @@ if (utenteEtà <= 18) {
     console.log(finalPrice);
 
     prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
-} else (utenteEtà >= 65) 
+} else if (utenteEtà >= 65) 
 {
     const discountPerc= 40;
 
@@ -34,7 +36,8 @@ if (utenteEtà <= 18) {
     console.log(finalPrice);
 
     prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalPrice;
+} else {
+    prezzoBiglietto.innerText = "Il prezzo del tuo biglietto è " + finalResult;
 }
-
 
 
